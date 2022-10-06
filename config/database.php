@@ -1,3 +1,4 @@
+$DATABASE_URL=parse_url("postgres://qrutomjcuslqkg:47e8c0297d502e8e45eafb38077f242ef6941a31de44fdf74d596dc5658a30a9@ec2-44-207-253-50.compute-1.amazonaws.com:5432/den6lvqniocc0j");
 <?php
 
 use Illuminate\Support\Str;
@@ -65,6 +66,7 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
+            'default' => env('DB_CONNECTION','pgsql'),
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
