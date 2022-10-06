@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION','pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +66,6 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'default' => env('DB_CONNECTION','pgsql'),
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
